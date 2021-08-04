@@ -1,0 +1,17 @@
+header {
+    background: rgb(29,29,29);
+    background: linear-gradient(129deg, rgba(29,29,29,1) 0%, rgba(0,0,0,1) 100%);
+    height: auto;
+    width: 100%;
+    filter: opacity(.74);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}

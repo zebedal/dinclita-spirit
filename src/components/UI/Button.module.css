@@ -1,0 +1,13 @@
+.button {
+    background: var(--dark-green);
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    font-family: raleway-regular;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    margin: 0 auto;
+}

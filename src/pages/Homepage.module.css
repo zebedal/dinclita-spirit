@@ -1,0 +1,353 @@
+section.landing {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+}
+section.content {
+    padding: 150px 0;
+    
+}
+.background {
+    width: 100%;
+    height: 100%;
+    filter: blur(6px);
+}
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/img/background.jpg);
+    background-size: cover;
+    background-position: center center;
+    filter: blur(5px);
+}
+.blur-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, var(--green) 0%, #1D1D1D 100%);
+    filter: opacity(.5);
+    mix-blend-mode: overlay;
+}
+.doggy {
+    position: absolute;
+    bottom: -100px;
+    left: calc(50%);
+    transform: translate(-50%, 0);
+    width: calc(220px + (450 - 220) * (100vw - 400px) / (1680 - 400));
+    height:calc(500px + (700 - 500) * (100vw - 400px) / (1680 - 400));
+    display: flex;
+    justify-content: center;
+}
+.doggy::before {
+    content: "Corso Italianno";
+    font-family: italianno;
+    font-size: calc(30px + (50 - 30) * (100vw - 400px) / (1680 - 400));
+    position: absolute;
+    right: -190px;
+    top: 45%;
+    color: white;
+    z-index: 9;
+}
+.doggy img {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 350px;
+   /*  z-index: 1; */
+}
+.hero-title {
+    font-family: impact;
+    font-size: calc(170px + (400 - 170) * (100vw - 400px) / (1680 - 400));
+    color: white;
+    line-height: 1;
+    letter-spacing: 6px;
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.hero-title > span:nth-child(2) {
+    background: white;
+    background-clip: text;
+    background-repeat: no-repeat;
+    opacity: .3;
+    color: transparent;
+}
+.lateral-text {
+    font-family: raleway-light;
+    font-size: calc(14px + (20 - 14) * (100vw - 400px) / (1680 - 400));
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 5px;
+    color: white;
+    margin-left: 5%;
+}
+.lateral-text > p {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+.video-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+.video-box > div  {
+    padding: 10px;
+    position: relative;
+}
+.subtitle {
+    font-family: raleway-regular;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.light {
+    font-family: raleway-light;
+    font-size: 12px;
+    color: #B7B7B7;
+    letter-spacing: 2px;
+}
+.video-box > div:nth-child(1) > p:nth-of-type(2) {
+    color: var(--green);
+    font-size: 14px;
+    font-family: raleway-regular;
+    margin-top: 10px;
+}
+.video-box > div:nth-child(2){
+    width: 120px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-box > div:nth-child(2) > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-box > div:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .3);
+    z-index: 2;
+}
+.lateral-controls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 60%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 20px;
+    /* margin-top: auto; */
+}
+.slider-controls {
+    align-self: flex-end;
+}
+.current {
+    writing-mode: vertical-lr;
+    margin-left: 25px;
+    margin-bottom: 50px;
+}
+.current > span:nth-child(1) {
+    font-size: 34px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.current > span:nth-child(2) {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #B7B7B7;
+}
+.control {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.control.green {
+    background: var(--dark-green);
+}
+.control.grey {
+    background: #1D1D1D;
+}
+section.content.services {
+    text-align: center;
+}
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1440px;
+    margin: 50px auto;
+}
+.service-box {
+    flex: 1 225px;
+    height: 400px;
+    position: relative;
+}
+.service-box:nth-child(2) {
+    flex: 1.2 470px; 
+    height: 500px;
+}
+.service-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .2);
+    z-index: 2;
+}
+.service-box > div {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+}
+.service-box > div > h5 {
+    font-family: raleway-regular;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: white;
+    letter-spacing: 2px;
+}
+.service-box > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1084px) {
+    .service-box:nth-child(2) {
+        height: 400px;
+        flex: 1 225px;
+    }
+}
+ @media screen and (max-width: 1440px) {
+    .doggy::before {
+        content: "Corso Italianno";
+        font-family: italianno;
+        font-size: calc(30px + (50 - 30) * (100vw - 400px) / (1680 - 400));
+        position: absolute;
+        right: -165px;
+        top: 42%;
+        color: white;
+        z-index: 9;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .doggy::before {
+        content: "Corso Italianno";
+        font-family: italianno;
+        font-size: calc(30px + (50 - 30) * (100vw - 400px) / (1680 - 400));
+        position: absolute;
+        right: -120px;
+        top: 35%;
+        color: white;
+        z-index: 9;
+    }
+}
+@media screen and (max-width: 900px) {
+    .doggy::before {
+        content: "Corso Italianno";
+        font-family: italianno;
+        font-size: calc(30px + (50 - 30) * (100vw - 400px) / (1680 - 400));
+        position: absolute;
+        right: -100px;
+        top: 30%;
+        color: white;
+        z-index: 9;
+    }
+}
+@media screen and (max-width: 750px) {
+    .doggy::before {
+        content: "Corso Italianno";
+        font-family: italianno;
+        font-size: calc(30px + (50 - 30) * (100vw - 400px) / (1680 - 400));
+        position: absolute;
+        right: -80px;
+        top: 25%;
+        color: white;
+        z-index: 9;
+    }
+}
+@media screen and (max-width: 450px) {
+    .hero-title {
+        top: -25px;
+    }
+    .doggy::before {
+        content: "Corso Italianno";
+        font-family: italianno;
+        font-size: calc(30px + (50 - 30) * (100vw - 400px) / (1680 - 400));
+        position: absolute;
+        right: -55px;
+        top: 30%;
+        color: white;
+        z-index: 9;
+    }
+    .video-box {
+        display: none;
+    }
+    .lateral-text {
+        display: none;
+    }
+    .lateral-controls {
+        bottom: 0;
+        left: 0;
+        flex-direction: row;
+        height: auto;
+    }
+    .slider-controls {
+        display: flex;
+        flex-direction: row;
+    }
+    .current {
+        display: none;
+    }
+    .control {
+        width: 50px;
+        height: 50px;
+    }
+}
