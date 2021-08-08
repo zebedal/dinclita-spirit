@@ -7,11 +7,56 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99999;
+    z-index: 98;
 }
 header > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
+}
+.navigation {
+    height: auto;
+    width: fit-content;
+    background: transparent;
+    padding: 20px 5%;
+    margin: 0 auto;
+    position: fixed;
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+}
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-family: raleway-light;
+    position: relative;
+    transition: all .4s ease;
+    font-size: 14px;
+    padding: 5px;
+}
+.navigation a > * {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: all .6s ease;
+}
+.navigation a:hover > * {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;  
+}
+.navigation > div {
+    display: flex;
+    gap:20px;
+}
+
+
+@media screen and (max-width: 920px) {
+    .navigation {
+        display: none;
+    }
 }

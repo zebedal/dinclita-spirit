@@ -25,6 +25,7 @@
 :root {
   --green: #819B26;
   --dark-green: #5B6533;
+  --text-color: #363636;
 }
 * {
   margin: 0;
@@ -33,9 +34,14 @@
 }
 body {
   font-family: raleway-regular;
-  font-size: 16px;
+  font-size: 14px;
   color: #363636;
   line-height: 1.2rem;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-family: raleway-regular;
 }
 h2 {
   font-family: raleway-light;
@@ -51,6 +57,16 @@ h2 {
 .container {
   width: 90%;
   margin: 0 auto;
-  max-width: 1680px;
+  max-width: 1440px;
   position: relative;
+}
+#video {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   width: 90vw;
+   height: 80%;
+   transform: translate(-50%, -50%);
+   z-index: 999;
+   pointer-events: none;
 }

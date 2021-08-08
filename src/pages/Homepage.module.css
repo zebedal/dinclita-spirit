@@ -6,7 +6,17 @@ section.landing {
 }
 section.content {
     padding: 150px 0;
-    
+    transform: translateY(100px);
+    opacity:0;
+    transition: all .5s ease;
+}
+section.video {
+    padding: 0;
+}
+
+.obs {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
 }
 .background {
     width: 100%;
@@ -107,6 +117,13 @@ section.content {
     align-items: center;
     gap: 20px;
     padding: 20px 0;
+}
+.small-video-wrapper {
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.small-video-wrapper:hover {
+    opacity: .5;
 }
 .video-box > div  {
     padding: 10px;
@@ -221,10 +238,25 @@ section.content.services {
     flex: 1 225px;
     height: 400px;
     position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: transform .5s ease;
+    
 }
+.service-box:hover {
+    /* transform: translateZ(20px); */
+}
+
 .service-box:nth-child(2) {
     flex: 1.2 470px; 
     height: 500px;
+}
+.service-box:hover::before {
+    background: rgba(0,0,0, .7);
+}
+.service-box:hover > div {
+    transform: translateY(-30px);
 }
 .service-box::before {
     content: "";
@@ -235,6 +267,7 @@ section.content.services {
     height: 100%;
     background: rgba(0,0,0, .2);
     z-index: 2;
+    transition: all .5s ease;
 }
 .service-box > div {
     position: absolute;
@@ -242,11 +275,12 @@ section.content.services {
     width: 100%;
     z-index: 3;
     text-align: center;
+    transition: all .5s ease;
 }
 .service-box > div > h5 {
     font-family: raleway-regular;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 15px;
     color: white;
     letter-spacing: 2px;
@@ -258,7 +292,125 @@ section.content.services {
     width: 100%;
     height: 100%;
 }
+.video-wrapper {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .5);
+    z-index: 9;
+}
+.video-wrapper > img:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-wrapper  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-wrapper > div {
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.video-wrapper > div > p {
+    color: white;
+}
+.video-wrapper > img:nth-of-type(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    opacity: .4;
+    width: 70vw;
+    max-width: 460px;
+}
 
+
+/* SECTION NEW MEMBERS */
+section.new-members {
+    
+    background-image: url(../assets/img/doggy.jpg);
+    background-position:center center ;
+    position: relative;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+section.new-members::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0, .9);
+    z-index: -1;
+}
+
+section.new-members >.content-wrapper {
+    
+    padding: 0 5%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    z-index: 9;
+}
+section.new-members >.content-wrapper > .content p {
+    color: silver;
+    margin-top: 20px;
+}
+section.new-members >.content-wrapper > .content button {
+    margin: 0;
+    margin-top: 20px;
+}
+section.new-members >.content-wrapper > .content  {
+    flex: 1 400px;
+   
+}
+section.new-members .babies {
+    flex: 1 300px;
+    position: relative;
+    padding: 20px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.baby-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.baby-box > img {
+    width: 150px;
+    clip-path: circle(50% at 50% 50%);
+}
+.baby-box:nth-child(1) {
+   align-self: flex-start;
+   
+}
+.baby-box:nth-child(2) {
+    align-self: flex-end;
+}
 @media screen and (max-width: 1084px) {
     .service-box:nth-child(2) {
         height: 400px;
@@ -314,6 +466,9 @@ section.content.services {
     }
 }
 @media screen and (max-width: 450px) {
+    .blur-overlay {
+        background-image: url('../assets/img/background-mobile.jpg');
+    }
     .hero-title {
         top: -25px;
     }
@@ -330,6 +485,7 @@ section.content.services {
     .video-box {
         display: none;
     }
+  
     .lateral-text {
         display: none;
     }

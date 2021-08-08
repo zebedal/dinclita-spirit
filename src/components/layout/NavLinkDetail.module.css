@@ -1,0 +1,27 @@
+.wrapper {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    padding: 10px;
+    padding-top: 20px;
+    background: white;
+}
+.wrapper h5 {
+    color: black;
+}
+.Video {
+    width: 270px;
+    height: 190px;
+}
+.Video.loaded {
+    visibility: visible;
+}
+.navlink-title {
+    font-family: raleway-medium;
+    font-size: 16px;
+}
+.navlink-text {
+    color: var(--text-color);
+    font-size: 12px;
+    margin-top: 5px;
+}

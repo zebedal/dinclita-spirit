@@ -1,6 +1,6 @@
 .button {
     background: var(--dark-green);
-    padding: 5px 20px;
+    padding: 8px 20px;
     display: flex;
     align-items: center;
     color: white;
@@ -10,4 +10,15 @@
     outline: none;
     border: none;
     margin: 0 auto;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.button:hover {
+    opacity: .8;
+}
+.button > svg {
+    transition: transform .3s ease;
+}
+.button:hover > svg {
+    transform: translateX(5px);
 }

@@ -1,15 +1,65 @@
+import { motion } from "framer-motion"
+
+const variants = {
+
+    start: {
+        opacity: 1
+    },
+    end: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
+}
+
+const children = {
+    start: {
+        opacity: 1
+    },
+    startNavOpen: obj => ({
+        opacity: 1,
+        translateX: obj.x, 
+        translateY: obj.y,
+        fill: '#819B26'   
+    }),
+    hover: obj => ({
+        translateX: obj.x, 
+        translateY: obj.y,
+        scale: 0.9,
+        rotate: 180,
+        opacity: 0.6,
+        transition: {
+            duration: 0.5,
+            ease: "easeOut"
+        }
+    })
+}
 
 
-const MenuToggler = props => (
-    <svg width="36" height="36" viewBox="0 0 36 36">
-        <g >
-            <rect id="Rectangle_7" data-name="Rectangle 7" width="36" height="36" fill="none" />
-        </g>
-        <g transform="translate(2.993 2.993)">
-            <path d="M13,5.5v6A1.5,1.5,0,0,1,11.5,13h-6A1.5,1.5,0,0,1,4,11.5v-6A1.5,1.5,0,0,1,5.5,4h6A1.5,1.5,0,0,1,13,5.5ZM22,4H16a1.5,1.5,0,0,0-1.5,1.5v6A1.5,1.5,0,0,0,16,13h6a1.5,1.5,0,0,0,1.5-1.5v-6A1.5,1.5,0,0,0,22,4Zm10.5,0h-6A1.5,1.5,0,0,0,25,5.5v6A1.5,1.5,0,0,0,26.5,13h6a1.5,1.5,0,0,0,1.5-1.5v-6A1.5,1.5,0,0,0,32.506,4Zm-21,10.5h-6A1.5,1.5,0,0,0,4,16v6a1.5,1.5,0,0,0,1.5,1.5h6A1.5,1.5,0,0,0,13,22V16A1.5,1.5,0,0,0,11.5,14.5Zm10.5,0H16A1.5,1.5,0,0,0,14.5,16v6A1.5,1.5,0,0,0,16,23.5h6A1.5,1.5,0,0,0,23.5,22V16A1.5,1.5,0,0,0,22,14.5Zm10.5,0h-6A1.5,1.5,0,0,0,25,16v6a1.5,1.5,0,0,0,1.5,1.5h6a1.5,1.5,0,0,0,1.5-1.5V16A1.5,1.5,0,0,0,32.506,14.5ZM11.5,25h-6A1.5,1.5,0,0,0,4,26.5v6a1.5,1.5,0,0,0,1.5,1.5h6a1.5,1.5,0,0,0,1.5-1.5v-6A1.5,1.5,0,0,0,11.5,25ZM22,25H16a1.5,1.5,0,0,0-1.5,1.5v6a1.5,1.5,0,0,0,1.5,1.5h6a1.5,1.5,0,0,0,1.5-1.5v-6A1.5,1.5,0,0,0,22,25Zm10.5,0h-6A1.5,1.5,0,0,0,25,26.5v6a1.5,1.5,0,0,0,1.5,1.5h6a1.5,1.5,0,0,0,1.5-1.5v-6A1.5,1.5,0,0,0,32.506,25Z" transform="translate(-4 -4)" fill="#fff" />
-        </g>
-    </svg>
 
-)
+const MenuToggler = ({toggleNav, navOpen}) => {
+
+
+    return (
+        <motion.svg variants={variants}  onClick={toggleNav} whileHover="hover" initial="start" animate={navOpen ? "startNavOpen" : "end"} width="59" height="51" viewBox="-15 -10 59 51" fill="none" style={{cursor: 'pointer'}}>
+            <motion.rect variants={children} custom={{x:-3, y: -3}}  width="8.87755" height="8.87755" rx="1" fill="white" />
+            <motion.rect variants={children} custom={{x:0, y: -3}}  x="10.0612" width="8.87755" height="8.87755" rx="1" fill="white" />
+            <motion.rect variants={children} custom={{x: 3, y: -3}} x="20.1224" width="8.87755" height="8.87755" rx="1" fill="white" />
+            <motion.rect variants={children} custom={{x: -3, y: 0}} y="11.0612" width="8.87755" height="8.87755" rx="1" fill="white" />
+            <motion.rect variants={children} custom={{x: 0, y: 0}} x="10.0612" y="11.0612" width="8.87755" height="8.87755" rx="1" fill="white" />
+            <motion.rect variants={children} custom={{x: 3, y: 0}} x="20.1224" y="11.0612" width="8.87755" height="8.87755" rx="1" fill="white" />
+            <motion.rect variants={children} custom={{x: -3, y: 3}} y="22" width="8.87755" height="8.87755" rx="1" fill="white" />
+            <motion.rect variants={children} custom={{x: 0, y: 3}} x="10.0612" y="22" width="8.87755" height="8.87755" rx="1" fill="white" />
+            <motion.rect variants={children} custom={{x: 3, y: 3}} x="20.1224" y="22" width="8.87755" height="8.87755" rx="1" fill="white" />
+        </motion.svg>
+    )
+
+
+
+
+}
+
+
 
 export default MenuToggler

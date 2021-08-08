@@ -1,7 +1,7 @@
 import React from 'react'
 
-const PlayButton = props => (
-    <svg width="51.349" height="51.349" viewBox="0 0 51.349 51.349" style={{zIndex: 9}}>
+const PlayButton = ({click}) => (
+    <svg width="51.349" height="51.349" viewBox="0 0 51.349 51.349" style={{zIndex: 9, cursor:'pointer'}} onClick={click}>
         <path d="M0,0H51.349V51.349H0Z" fill="none" />
         <g   transform="translate(4.279 4.279)" fill="none" strokeMiterlimit="10">
             <path d="M21.4,0a21.4,21.4,0,1,0,21.4,21.4A21.4,21.4,0,0,0,21.4,0Z" stroke="none" />
