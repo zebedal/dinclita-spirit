@@ -8,10 +8,13 @@
     font-family: raleway-regular;
     font-size: 14px;
     outline: none;
-    border: none;
+    border: none; 
     margin: 0 auto;
     cursor: pointer;
     transition: all .3s ease;
+}
+.button.left {
+    margin: 20px 0;
 }
 .button:hover {
     opacity: .8;

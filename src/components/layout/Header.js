@@ -1,9 +1,10 @@
 import styles from './Header.module.css'
 import Logo from '../svg/Logo'
 import MenuToggler from '../svg/MenuToggler'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import NavLink from './Navlink'
+import useScrollTop from '../custom/ScrollTop'
 
 const container = {
     start: {
@@ -22,7 +23,8 @@ const container = {
 const Header = ({toggleMobileNav}) => {
 
     const [navigationOpen, setNavigationOpen] = useState(false);
-  
+
+    const scrollPos = useScrollTop();
 
     const toggleNav = () => {
         setNavigationOpen(!navigationOpen);
@@ -30,12 +32,10 @@ const Header = ({toggleMobileNav}) => {
 
     let mobile = window.innerWidth < 750;
 
-    console.log(mobile)
-   
 
     return (
         <React.Fragment>
-            <header>
+            <header className={`${styles.Header} ${scrollPos > 100 ? styles.scrolled : null}`}>
                 <div className="container">
                     <span><Logo /></span>
                     <span><MenuToggler toggleNav={mobile ? toggleMobileNav : toggleNav} navOpen={navigationOpen} /></span>

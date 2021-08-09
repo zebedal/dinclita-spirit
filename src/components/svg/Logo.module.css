@@ -1,3 +1,6 @@
+.Logo {
+    cursor: pointer;
+}
 @media (max-width: 450px) {
     .Logo {
         width: 120px;

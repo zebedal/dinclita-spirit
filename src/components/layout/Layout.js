@@ -2,6 +2,7 @@ import styles from './Layout.module.css'
 import Header from './Header'
 import MobileSidebar from './MobileSidebar'
 import { useState } from 'react'
+import Footer from './Footer'
 
 const Layout = props => {
 
@@ -16,6 +17,7 @@ const Layout = props => {
             <Header toggleMobileNav={toggleMobileSideNav} />
             <MobileSidebar show={mobileSidebarOpen} toggleSidebar={toggleMobileSideNav} />
             {props.children}
+            <Footer />
         </div>
     )
 }

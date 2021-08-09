@@ -348,6 +348,7 @@ section.new-members {
     
     background-image: url(../assets/img/doggy.jpg);
     background-position:center center ;
+    background-attachment: fixed;
     position: relative;
     height: auto;
     display: flex;
@@ -365,8 +366,7 @@ section.new-members::before {
 }
 
 section.new-members >.content-wrapper {
-    
-    padding: 0 5%;
+    /* padding: 0 5%; */
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -375,7 +375,7 @@ section.new-members >.content-wrapper {
     z-index: 9;
 }
 section.new-members >.content-wrapper > .content p {
-    color: silver;
+    color: #979797;
     margin-top: 20px;
 }
 section.new-members >.content-wrapper > .content button {
@@ -383,17 +383,19 @@ section.new-members >.content-wrapper > .content button {
     margin-top: 20px;
 }
 section.new-members >.content-wrapper > .content  {
-    flex: 1 400px;
+    flex: 1 350px;
    
 }
 section.new-members .babies {
     flex: 1 300px;
     position: relative;
     padding: 20px;
-    height: 400px;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 .baby-box {
     display: flex;
@@ -411,6 +413,16 @@ section.new-members .babies {
 .baby-box:nth-child(2) {
     align-self: flex-end;
 }
+
+/*SECTION RELATED */
+.related-wrapper {
+    display: flex;
+    gap:30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+
 @media screen and (max-width: 1084px) {
     .service-box:nth-child(2) {
         height: 400px;
@@ -463,6 +475,14 @@ section.new-members .babies {
         top: 25%;
         color: white;
         z-index: 9;
+    }
+    .babies {
+        /* justify-content: space-between !important; */
+        height: auto !important;
+        margin-top: 20px;
+    }
+    .baby-box {
+        align-self: flex-start !important;
     }
 }
 @media screen and (max-width: 450px) {

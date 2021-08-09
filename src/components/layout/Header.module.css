@@ -1,4 +1,4 @@
-header {
+.Header {
     background: rgb(29,29,29);
     background: linear-gradient(129deg, rgba(29,29,29,1) 0%, rgba(0,0,0,1) 100%);
     height: auto;
@@ -9,7 +9,11 @@ header {
     left: 0;
     z-index: 98;
 }
-header > div {
+.Header.scrolled {
+    background: black !important;
+    filter: opacity(1) !important;
+}
+.Header > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
