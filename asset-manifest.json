@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dinclita-spirit/static/css/main.e501cb27.chunk.css",
-    "main.js": "/dinclita-spirit/static/js/main.f6664757.chunk.js",
-    "main.js.map": "/dinclita-spirit/static/js/main.f6664757.chunk.js.map",
+    "main.js": "/dinclita-spirit/static/js/main.30e960ea.chunk.js",
+    "main.js.map": "/dinclita-spirit/static/js/main.30e960ea.chunk.js.map",
     "runtime-main.js": "/dinclita-spirit/static/js/runtime-main.43f9017f.js",
     "runtime-main.js.map": "/dinclita-spirit/static/js/runtime-main.43f9017f.js.map",
     "static/js/2.f01432a9.chunk.js": "/dinclita-spirit/static/js/2.f01432a9.chunk.js",
@@ -38,6 +38,6 @@
     "static/js/runtime-main.43f9017f.js",
     "static/js/2.f01432a9.chunk.js",
     "static/css/main.e501cb27.chunk.css",
-    "static/js/main.f6664757.chunk.js"
+    "static/js/main.30e960ea.chunk.js"
   ]
 }
