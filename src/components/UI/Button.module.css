@@ -1,0 +1,27 @@
+.button {
+    background: var(--dark-green);
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    font-family: raleway-regular;
+    font-size: 14px;
+    outline: none;
+    border: none; 
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.button.left {
+    margin: 20px 0;
+}
+.button:hover {
+    opacity: .8;
+}
+.button > svg {
+    transition: transform .3s ease;
+}
+.button:hover > svg {
+    transform: translateX(5px);
+}

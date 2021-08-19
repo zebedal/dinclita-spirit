@@ -1,0 +1,529 @@
+section.landing {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+}
+section.content {
+    padding: 150px 0;
+    transform: translateY(100px);
+    opacity:0;
+    transition: all .5s ease;
+}
+section.video {
+    padding: 0;
+}
+
+.obs {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+}
+.background {
+    width: 100%;
+    height: 100%;
+    filter: blur(6px);
+}
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/img/background.jpg);
+    background-size: cover;
+    background-position: center center;
+    filter: blur(5px);
+}
+.blur-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, var(--green) 0%, #1D1D1D 100%);
+    filter: opacity(.5);
+    mix-blend-mode: overlay;
+}
+.doggy {
+    position: absolute;
+    bottom: -100px;
+    left: calc(50%);
+    transform: translate(-50%, 0);
+    width: calc(220px + (450 - 220) * (100vw - 400px) / (1680 - 400));
+    height:calc(500px + (700 - 500) * (100vw - 400px) / (1680 - 400));
+    display: flex;
+    justify-content: center;
+}
+.doggy::before {
+    content: "Corso Italianno";
+    font-family: italianno;
+    font-size: calc(30px + (50 - 30) * (100vw - 400px) / (1680 - 400));
+    position: absolute;
+    right: -190px;
+    top: 45%;
+    color: white;
+    z-index: 9;
+}
+.doggy img {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 350px;
+   /*  z-index: 1; */
+}
+.hero-title {
+    font-family: impact;
+    font-size: calc(170px + (400 - 170) * (100vw - 400px) / (1680 - 400));
+    color: white;
+    line-height: 1;
+    letter-spacing: 6px;
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.hero-title > span:nth-child(2) {
+    background: white;
+    background-clip: text;
+    background-repeat: no-repeat;
+    opacity: .3;
+    color: transparent;
+}
+.lateral-text {
+    font-family: raleway-light;
+    font-size: calc(14px + (20 - 14) * (100vw - 400px) / (1680 - 400));
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 5px;
+    color: white;
+    margin-left: 5%;
+}
+.lateral-text > p {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+.video-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+.small-video-wrapper {
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.small-video-wrapper:hover {
+    opacity: .5;
+}
+.video-box > div  {
+    padding: 10px;
+    position: relative;
+}
+.subtitle {
+    font-family: raleway-regular;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.light {
+    font-family: raleway-light;
+    font-size: 12px;
+    color: #B7B7B7;
+    letter-spacing: 2px;
+}
+.video-box > div:nth-child(1) > p:nth-of-type(2) {
+    color: var(--green);
+    font-size: 14px;
+    font-family: raleway-regular;
+    margin-top: 10px;
+}
+.video-box > div:nth-child(2){
+    width: 120px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-box > div:nth-child(2) > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-box > div:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .3);
+    z-index: 2;
+}
+.lateral-controls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 60%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 20px;
+    /* margin-top: auto; */
+}
+.slider-controls {
+    align-self: flex-end;
+}
+.current {
+    writing-mode: vertical-lr;
+    margin-left: 25px;
+    margin-bottom: 50px;
+}
+.current > span:nth-child(1) {
+    font-size: 34px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.current > span:nth-child(2) {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #B7B7B7;
+}
+.control {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.control.green {
+    background: var(--dark-green);
+}
+.control.grey {
+    background: #1D1D1D;
+}
+section.content.services {
+    text-align: center;
+}
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1440px;
+    margin: 50px auto;
+}
+.service-box {
+    flex: 1 225px;
+    height: 400px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: transform .5s ease;
+    
+}
+.service-box:hover {
+    /* transform: translateZ(20px); */
+}
+
+.service-box:nth-child(2) {
+    flex: 1.2 470px; 
+    height: 500px;
+}
+.service-box:hover::before {
+    background: rgba(0,0,0, .7);
+}
+.service-box:hover > div {
+    transform: translateY(-30px);
+}
+.service-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .2);
+    z-index: 2;
+    transition: all .5s ease;
+}
+.service-box > div {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+    transition: all .5s ease;
+}
+.service-box > div > h5 {
+    /* font-family: raleway-regular; */
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: white;
+    letter-spacing: 2px;
+}
+.service-box > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-wrapper {
+    height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .5);
+    z-index: 9;
+}
+.video-wrapper > img:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-wrapper  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-wrapper > div {
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.video-wrapper > div > p {
+    color: white;
+}
+.video-wrapper > img:nth-of-type(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    opacity: .4;
+    width: 70vw;
+    max-width: 460px;
+}
+
+
+/* SECTION NEW MEMBERS */
+section.new-members {
+    
+    background-image: url(../assets/img/doggy.jpg);
+    background-position:center center ;
+    background-attachment: fixed;
+    position: relative;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+section.new-members::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0, .9);
+    z-index: -1;
+}
+
+section.new-members >.content-wrapper {
+    /* padding: 0 5%; */
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    z-index: 9;
+}
+section.new-members >.content-wrapper > .content p {
+    color: #979797;
+    margin-top: 20px;
+}
+section.new-members >.content-wrapper > .content button {
+    margin: 0;
+    margin-top: 20px;
+}
+section.new-members >.content-wrapper > .content  {
+    flex: 1 350px;
+   
+}
+section.new-members .babies {
+    flex: 1 300px;
+    position: relative;
+    padding: 20px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.baby-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.baby-box > img {
+    width: 150px;
+    clip-path: circle(50% at 50% 50%);
+}
+.baby-box:nth-child(1) {
+   align-self: flex-start;
+   
+}
+.baby-box:nth-child(2) {
+    align-self: flex-end;
+}
+
+/*SECTION RELATED */
+.related-wrapper {
+    display: flex;
+    gap:30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+
+@media screen and (max-width: 1084px) {
+    .service-box:nth-child(2) {
+        height: 400px;
+        flex: 1 225px;
+    }
+}
+ @media screen and (max-width: 1440px) {
+    .doggy::before {
+        content: "Corso Italianno";
+        font-family: italianno;
+        font-size: calc(30px + (50 - 30) * (100vw - 400px) / (1680 - 400));
+        position: absolute;
+        right: -165px;
+        top: 42%;
+        color: white;
+        z-index: 9;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .doggy::before {
+        content: "Corso Italianno";
+        font-family: italianno;
+        font-size: calc(30px + (50 - 30) * (100vw - 400px) / (1680 - 400));
+        position: absolute;
+        right: -120px;
+        top: 35%;
+        color: white;
+        z-index: 9;
+    }
+}
+@media screen and (max-width: 900px) {
+    .doggy::before {
+        content: "Corso Italianno";
+        font-family: italianno;
+        font-size: calc(30px + (50 - 30) * (100vw - 400px) / (1680 - 400));
+        position: absolute;
+        right: -100px;
+        top: 30%;
+        color: white;
+        z-index: 9;
+    }
+}
+@media screen and (max-width: 750px) {
+    .doggy::before {
+        content: "Corso Italianno";
+        font-family: italianno;
+        font-size: calc(30px + (50 - 30) * (100vw - 400px) / (1680 - 400));
+        position: absolute;
+        right: -80px;
+        top: 25%;
+        color: white;
+        z-index: 9;
+    }
+    .babies {
+        /* justify-content: space-between !important; */
+        height: auto !important;
+        margin-top: 20px;
+    }
+    .baby-box {
+        align-self: flex-start !important;
+    }
+}
+@media screen and (max-width: 450px) {
+    .blur-overlay {
+        background-image: url('../assets/img/background-mobile.jpg');
+    }
+    .hero-title {
+        top: -25px;
+    }
+    .doggy::before {
+        content: "Corso Italianno";
+        font-family: italianno;
+        font-size: calc(30px + (50 - 30) * (100vw - 400px) / (1680 - 400));
+        position: absolute;
+        right: -55px;
+        top: 30%;
+        color: white;
+        z-index: 9;
+    }
+    .video-box {
+        display: none;
+    }
+  
+    .lateral-text {
+        display: none;
+    }
+    .lateral-controls {
+        bottom: 0;
+        left: 0;
+        flex-direction: row;
+        height: auto;
+    }
+    .slider-controls {
+        display: flex;
+        flex-direction: row;
+    }
+    .current {
+        display: none;
+    }
+    .control {
+        width: 50px;
+        height: 50px;
+    }
+}

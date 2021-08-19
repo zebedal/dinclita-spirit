@@ -1,0 +1,26 @@
+.related-box {
+    flex: 1 200px;
+}
+.related-box-img-wrapper{
+    position: relative;
+}
+.related-box-img-wrapper > img {
+    width: 100%;
+    height: 100%;
+}
+.related-box h5 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: raleway-light;
+    margin-top: 10px;
+}
+.related-box p {
+    margin-top: 10px;
+}
+.related-box a {
+    color: black;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
