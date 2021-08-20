@@ -22,6 +22,17 @@ const NavLink = ({videoSrc, name, to}) => {
         setLoadVideo(true);
     }
 
+    if(!videoSrc) {
+        return (
+            <motion.span variants={navLinks} onMouseEnter={handleVideo}>
+                <Link to={to}>{name}
+                    
+                </Link>
+            </motion.span>
+            
+        )
+    }
+
     return (
         <motion.span variants={navLinks} onMouseEnter={handleVideo}>
             <Link to={to}>{name}

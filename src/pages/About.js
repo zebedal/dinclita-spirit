@@ -5,8 +5,64 @@ import pessoal2 from '../assets/img/pessoal2.png'
 import pessoal3 from '../assets/img/pessoal3.png'
 import Button from '../components/UI/Button'
 import test from '../assets/img/testemunhos/testemunho1.jpg'
+import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
+
+
+
+const equipaVariants = {
+    start: {
+        y: 100,
+        opacity: 0
+    },
+    end: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+            type: 'spring',
+            stiffness: 200,
+            damping: 10
+        }
+    }
+}
+
+const lettering = {
+    start: {
+    },
+    end: {
+        transition: {
+            staggerChildren: 0.2
+        }
+    }
+}
+
+const letras = {
+    start: {
+        
+        scaleY:0,
+        originY: 1
+    },
+    end: {
+        
+        scaleY:1,
+        transition:{
+            type: 'spring',
+            stiffness: 200,
+            
+        }
+    }
+}
 
 const PetHotel = props => {
+
+    const inViewoptions = {
+        triggerOnce: true,
+        threshold: 0.1
+    }
+
+    const [ref, inView, entry] = useInView(inViewoptions)
+    const [ref1, inView1, entry1] = useInView(inViewoptions)
 
     return (
         <React.Fragment>
@@ -23,7 +79,7 @@ const PetHotel = props => {
                 <p>Temos como missão garantir que os animais que ficam ao nosso cuidado usufruam de elevados índices de bem-estar, conforto e segurança. Promovemos momentos de passeio, atividades e rotinas de alimentação, garantindo uma resposta adaptada às necessidades físicas e emocionais de cada animal. Dispomos de assistência veterinária e acompanhamento contínuo durante toda a sua permanência na nossa quinta.</p>
             </div>
 
-            <section className={styles.pessoal}>
+            <motion.section className={styles.pessoal} ref={ref} variants={equipaVariants} initial="start" animate={`${inView ? "end" : ""}`}>
                 <div className={`container ${styles.Container}`} >
                     <h2>Equipa</h2>
                     <p>Conheça a nossa equipa</p>
@@ -55,22 +111,31 @@ const PetHotel = props => {
                     </div>
                     <Button text="saber mais" />
                 </div>
-            </section>
+            </motion.section>
 
             <section className={styles.visita}>
                 <div className={styles['image-container']}>
                     <div className={`container ${styles.Container}`} >
                         <div>
-                            <h2 className={styles.impact}>Agende já a sua <br /><span>visita</span></h2>
+                            <h2 className={styles.impact}>Agende já a sua <br />
+                            <motion.span variants={lettering} initial="start" animate={inView1 ? "end" : ""} ref={ref1}>
+                                <motion.span className={styles.letra} variants={letras}>v</motion.span>
+                                <motion.span className={styles.letra} variants={letras}>i</motion.span>
+                                <motion.span className={styles.letra} variants={letras}>s</motion.span>
+                                <motion.span className={styles.letra} variants={letras}>i</motion.span>
+                                <motion.span className={styles.letra} variants={letras}>t</motion.span>
+                                <motion.span className={styles.letra} variants={letras}>a</motion.span>
+                            </motion.span>
+                            </h2>
                             <Button text="Marcar visita" margin="left" />
                         </div>
-                        <div className={styles['testemunhos-wrapper']}>
+                        <motion.div className={styles['testemunhos-wrapper']} initial={{y: 100, opacity: 0}} animate={inView1 ? {y:0, opacity:1, transition:{delay: 1.2}} : ""}>
                             <div className={styles.testemunhos}>
                                 <img src={test} alt="hotel para caes" />
-                                <p>"Excelentes condições, funcionários simpáticos e óptimo tratamento dos animais"</p>
+                                <p>"Excelentes condições, funcionários simpáticos<br /> e óptimo tratamento dos animais"</p>
                                 <p className={styles['testemunho-name']}>José Matias</p>
                             </div>
-                        </div>
+                        </motion.div>
 
                     </div>
                 </div>

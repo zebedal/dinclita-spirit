@@ -3,6 +3,7 @@ import Facebook from '../svg/Facebook'
 import Instagram from '../svg/Instagram'
 import Youtube from '../svg/Youtube'
 import Logo from '../svg/Logo'
+import {Link} from 'react-router-dom'
 
 const MobileSidebar = ({ show, toggleSidebar }) => {
 
@@ -17,12 +18,12 @@ const MobileSidebar = ({ show, toggleSidebar }) => {
                 </svg>
             </div>
             <div className={styles.menu}>
-                <a href="#">Home</a>
-                <a href="#">Sobre Nós</a>
-                <a href="#">Pet Hotel</a>
-                <a href="#">Cane Corso</a>
-                <a href="#">French Bulldog</a>
-                <a href="#">Contactos</a>
+                <Link to="/">Home</Link>
+                <Link to="/about">Sobre Nós</Link>
+                <Link to="/pethotel">Pet Hotel</Link>
+                <Link to="/canecorso">Cane Corso</Link>
+                <Link to="/bulldog">French Bulldog</Link>
+                <Link to="/contactos">Contactos</Link>
             </div>
 
             <div className={styles.social}>

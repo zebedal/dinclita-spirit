@@ -4,6 +4,8 @@ import { Route } from 'react-router-dom'
 import PetHotel from './pages/PetHotel';
 import About from './pages/About'
 import ScrollToTop from './components/custom/scrollToTop'
+import Cane from './pages/Cane';
+import BullDog from './pages/Bulldog';
 
 function App() {
   return (
@@ -18,6 +20,12 @@ function App() {
         </Route>
         <Route path="/pethotel">
           <PetHotel />
+        </Route>
+        <Route path="/canecorso">
+          <Cane />
+        </Route>
+        <Route path="/bulldog">
+          <BullDog />
         </Route>
       </Layout>
     </div>

@@ -47,7 +47,8 @@ const Header = ({toggleMobileNav}) => {
                     <NavLink name="Sobre Nós" videoSrc="video.mp4" to="/about" />
                     <NavLink name="Pet Hotel" videoSrc="video2.mp4" to="/pethotel"/>
                     <NavLink name="Cane Corso" videoSrc="video3.mp4" to="/canecorso"/>
-                    <NavLink name="French Bulldog" videoSrc="video4.mp4" to="/frenchbulldog"/>
+                    <NavLink name="French Bulldog" videoSrc="video4.mp4" to="/bulldog"/>
+                    <NavLink name="Contactos"  to="/contactos"/>
                 </motion.div>
             </div>
         </React.Fragment>

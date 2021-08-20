@@ -82,6 +82,7 @@ section.visita  .Container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 1280px !important;
 }
 section.visita .image-container{
     background-image: url(../assets/img/about_background.jpg);
@@ -104,8 +105,8 @@ section.visita::before {
     z-index: 0;
 }
 .impact {
-    font-family: raleway-regular;
-    font-size: calc(22px + (42 - 22) * (100vw - 400px) / (1680 - 400));
+    font-family: raleway-light;
+    font-size: calc(22px + (32 - 22) * (100vw - 400px) / (1680 - 400));
     color: white;
     letter-spacing: 5px;
 }
@@ -136,6 +137,9 @@ section.visita::before {
     color: var(--green) !important;
     margin-top: 10px;
     font-size: 16px;
+}
+.letra {
+    display: inline-block;
 }
 
 /* @media(max-width: 550px) {
