@@ -1,0 +1,2 @@
+(this["webpackJsonpcane-corso"]=this["webpackJsonpcane-corso"]||[]).push([[6],{55:function(s,c,a){"use strict";a.r(c),c.default=a.p+"static/media/video4.0a7b9129.mp4"}}]);
+//# sourceMappingURL=6.82b104c2.chunk.js.map
