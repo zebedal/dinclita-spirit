@@ -1,26 +1,26 @@
 @font-face {
   font-family: raleway-light;
-  src: url('./assets/fonts/Raleway-Light.woff2') format('woff2');
+  src: url('assets/fonts/Raleway-Light.woff2') format('woff2');
 }
 @font-face {
   font-family: raleway-regular;
-  src: url('./assets/fonts/Raleway-Regular.woff2') format('woff2');
+  src: url('assets/fonts/Raleway-Regular.woff2') format('woff2');
 }
 @font-face {
   font-family: raleway-medium;
-  src: url('./assets/fonts/Raleway-Medium.woff2') format('woff2');
+  src: url('assets/fonts/Raleway-Medium.woff2') format('woff2');
 }
 @font-face {
   font-family: raleway-semi-bold;
-  src: url('./assets/fonts/Raleway-SemiBold.woff2') format('woff2');
+  src: url('assets/fonts/Raleway-SemiBold.woff2') format('woff2');
 }
 @font-face {
   font-family: impact;
-  src: url('./assets/fonts/impact.woff2') format('woff2');
+  src: url('assets/fonts/impact.woff2') format('woff2');
 }
 @font-face {
   font-family: italianno;
-  src: url('./assets/fonts/italianno.woff2') format('woff2');
+  src: url('assets/fonts/italianno.woff2') format('woff2');
 }
 :root {
   --green: #819B26;

@@ -24,7 +24,7 @@ const Footer = props => (
             <div className={styles['footer-content']}>
                 <div className={styles['footer-column']}>
                     <Logo />
-                    <p style={{color: '#C2C2C2', fontSize: '14px'}}>Adipisicing incididunt officia ad ex eiusmod Lorem.<br /> Consequat nostrud culpa nostrud et Lorem amet.</p>
+                    <p style={{color: '#C2C2C2'}}>Adipisicing incididunt officia ad ex eiusmod Lorem.<br /> Consequat nostrud culpa nostrud et Lorem amet.</p>
                 </div>
                 <div className={styles['footer-column']}>
                     <div>

@@ -485,7 +485,10 @@ section.new-members .babies {
         align-self: flex-start !important;
     }
 }
-@media screen and (max-width: 450px) {
+@media (max-width: 450px) {
+    section.content.services, section.content.related {
+        padding: 80px 0 40px 0 !important;
+    }
     .blur-overlay {
         background-image: url('../assets/img/background-mobile.jpg');
     }

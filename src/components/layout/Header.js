@@ -23,6 +23,8 @@ const container = {
 
 const Header = ({toggleMobileNav}) => {
 
+
+
     const [navigationOpen, setNavigationOpen] = useState(false);
 
     const scrollPos = useScrollTop();
@@ -32,6 +34,8 @@ const Header = ({toggleMobileNav}) => {
     }
 
     let mobile = window.innerWidth < 900;
+
+
 
     return (
         <React.Fragment>

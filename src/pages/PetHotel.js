@@ -36,8 +36,9 @@ const PetHotel = props => {
                         <source src={video} type="video/mp4"></source>
                     </video>
                 </div>
-                <div className={styles.galleryWrapper}>
+                <div className={styles.galleryWrapper} style={{textAlign:'center'}}>
                     <h2>Galeria de imagens</h2>
+                    <p style={{marginTop: '10px'}}>Id occaecat do nostrud ad sit exercitation anim tempor nulla do. Fugiat veniam dolor sint commodo sint enim est irure tempor veniam occaecat mollit duis quis. Ut magna ipsum nulla cillum.</p>
                     <div className={styles.gallery}>
                         <SRLWrapper>
                             {images.map((img, idx) => <img className={styles.galleryItem} src={`${PATH}${img}`} key={idx} alt={img} />)}

@@ -39,7 +39,7 @@ const Cane = props => {
                         <p>Nullam non condimentum nisl. Fusce justo dui, ultrices vel urna quis, pharetra hendrerit purus. Nulla ac erat et mauris vestibulum vehicula. Quisque cursus leo non fermentum mollis. Quisque fringilla elit vitae pulvinar hendrerit. Sed porta viverra nisl, sed pellentesque quam consectetur vel.</p>
                         <br />
                         <h4>Principais características</h4>
-                        <br />
+                       
                         <ol>
                             <li>Quisque cursus leo non fermentum mollis</li>
                             <li>Quisque cursus leo non fermentum mollis</li>

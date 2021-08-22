@@ -34,6 +34,7 @@
 .Container li {
     list-style: square;
     margin-top: 10px;
+    font-size: calc(13px + (16 - 13) * (100vw - 400px) / (1680 - 400));;
 }
 .col60 {
     width: 60%;
@@ -106,7 +107,7 @@
 }
 .ninhadaItem > .col40 > p:not(:nth-child(1)) {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: calc(16px + (18 - 16) * (100vw - 400px) / (1680 - 400));
 }
 .ninhadaItem > .col40 > p span{
     font-weight: bold;
@@ -118,11 +119,11 @@
 }
 
 .dogName {
-    font-size: 40px;
+    font-size: calc(32px + (40 - 32) * (100vw - 400px) / (1680 - 400)) !important;
     line-height: 2;
 }
 .description {
-    font-size: 16px !important;
+    font-size: calc(13px + (16 - 13) * (100vw - 400px) / (1680 - 400)) !important;
     margin-top: 30px !important;
 }
 .contact {
@@ -130,6 +131,9 @@
     text-align: center;
 }
 @media(max-width: 750px) {
+    .Section {
+        padding: 80px 0;
+    }
     .image-grid > div {
         grid-template-rows: repeat(5, 1fr) !important;
     }
@@ -153,9 +157,7 @@
     .ninhadaItem > .col40 {
         width: 100% !important;
         order: 1 !important;
+        padding: 0;
     }
    
-}
-@media(max-width:450px) {
-    
 }

@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/dinclita-spirit/static/css/main.7c4f2b19.chunk.css",
-    "main.js": "/dinclita-spirit/static/js/main.86415f35.chunk.js",
-    "main.js.map": "/dinclita-spirit/static/js/main.86415f35.chunk.js.map",
+    "main.css": "/dinclita-spirit/static/css/main.1d6d6ae9.chunk.css",
+    "main.js": "/dinclita-spirit/static/js/main.fafb780f.chunk.js",
+    "main.js.map": "/dinclita-spirit/static/js/main.fafb780f.chunk.js.map",
     "runtime-main.js": "/dinclita-spirit/static/js/runtime-main.b0683d17.js",
     "runtime-main.js.map": "/dinclita-spirit/static/js/runtime-main.b0683d17.js.map",
-    "static/js/2.a19dd4bb.chunk.js": "/dinclita-spirit/static/js/2.a19dd4bb.chunk.js",
-    "static/js/2.a19dd4bb.chunk.js.map": "/dinclita-spirit/static/js/2.a19dd4bb.chunk.js.map",
+    "static/js/2.32e14a21.chunk.js": "/dinclita-spirit/static/js/2.32e14a21.chunk.js",
+    "static/js/2.32e14a21.chunk.js.map": "/dinclita-spirit/static/js/2.32e14a21.chunk.js.map",
     "static/js/3.d0b9f74c.chunk.js": "/dinclita-spirit/static/js/3.d0b9f74c.chunk.js",
     "static/js/3.d0b9f74c.chunk.js.map": "/dinclita-spirit/static/js/3.d0b9f74c.chunk.js.map",
     "static/js/4.4c44bbf2.chunk.js": "/dinclita-spirit/static/js/4.4c44bbf2.chunk.js",
@@ -16,8 +16,8 @@
     "static/js/6.82b104c2.chunk.js": "/dinclita-spirit/static/js/6.82b104c2.chunk.js",
     "static/js/6.82b104c2.chunk.js.map": "/dinclita-spirit/static/js/6.82b104c2.chunk.js.map",
     "index.html": "/dinclita-spirit/index.html",
-    "static/css/main.7c4f2b19.chunk.css.map": "/dinclita-spirit/static/css/main.7c4f2b19.chunk.css.map",
-    "static/js/2.a19dd4bb.chunk.js.LICENSE.txt": "/dinclita-spirit/static/js/2.a19dd4bb.chunk.js.LICENSE.txt",
+    "static/css/main.1d6d6ae9.chunk.css.map": "/dinclita-spirit/static/css/main.1d6d6ae9.chunk.css.map",
+    "static/js/2.32e14a21.chunk.js.LICENSE.txt": "/dinclita-spirit/static/js/2.32e14a21.chunk.js.LICENSE.txt",
     "static/media/1.78248974.jpg": "/dinclita-spirit/static/media/1.78248974.jpg",
     "static/media/2.96dd0934.jpg": "/dinclita-spirit/static/media/2.96dd0934.jpg",
     "static/media/3.befdf0f0.jpg": "/dinclita-spirit/static/media/3.befdf0f0.jpg",
@@ -52,8 +52,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b0683d17.js",
-    "static/js/2.a19dd4bb.chunk.js",
-    "static/css/main.7c4f2b19.chunk.css",
-    "static/js/main.86415f35.chunk.js"
+    "static/js/2.32e14a21.chunk.js",
+    "static/css/main.1d6d6ae9.chunk.css",
+    "static/js/main.fafb780f.chunk.js"
   ]
 }
