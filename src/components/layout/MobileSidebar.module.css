@@ -56,7 +56,7 @@
 .social-icons-wrapper > svg > path {
     /* fill: var(--dark-green) */
 }
-@media (max-width: 750px) {
+@media (max-width: 920px) {
     .sidebar {
         display: flex;
         flex-direction: column;

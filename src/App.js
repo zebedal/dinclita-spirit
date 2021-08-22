@@ -6,6 +6,7 @@ import About from './pages/About'
 import ScrollToTop from './components/custom/scrollToTop'
 import Cane from './pages/Cane';
 import BullDog from './pages/Bulldog';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path="/bulldog">
           <BullDog />
+        </Route>
+        <Route path="/contactos">
+          <Contact />
         </Route>
       </Layout>
     </div>

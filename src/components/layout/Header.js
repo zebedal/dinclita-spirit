@@ -31,8 +31,7 @@ const Header = ({toggleMobileNav}) => {
         setNavigationOpen(!navigationOpen);
     }
 
-    let mobile = window.innerWidth < 750;
-
+    let mobile = window.innerWidth < 900;
 
     return (
         <React.Fragment>

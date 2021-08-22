@@ -38,6 +38,9 @@ body {
   color: #363636;
   line-height: 1.5rem;
 }
+p {
+  font-size: calc(13px + (16 - 13) * (100vw - 400px) / (1680 - 400));
+}
 a {
   text-decoration: none;
   color: white;
@@ -69,4 +72,7 @@ h2 {
    transform: translate(-50%, -50%);
    z-index: 999;
    pointer-events: none;
+}
+::placeholder {
+  font-family: raleway-regular;
 }
