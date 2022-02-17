@@ -345,7 +345,7 @@ section.content.services {
 
 /* SECTION NEW MEMBERS */
 section.new-members {
-    
+    background-size: cover;
     background-image: url(../assets/img/doggy.jpg);
     background-position:center center ;
     background-attachment: fixed;

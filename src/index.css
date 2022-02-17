@@ -39,7 +39,7 @@ body {
   line-height: 1.5rem;
 }
 p {
-  font-size: calc(13px + (16 - 13) * (100vw - 400px) / (1680 - 400));
+  font-size: calc(12px + (14 - 12) * (100vw - 400px) / (1680 - 400));
 }
 a {
   text-decoration: none;
